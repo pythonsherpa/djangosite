@@ -13,11 +13,6 @@ class CustomerForm(forms.ModelForm):
         }
 
 
-class ProductForm(forms.ModelForm):
-    # TODO: create a form for products
-    pass
-
-
 class ContactForm(forms.Form):
     name = forms.CharField()
     message = forms.CharField(widget=forms.Textarea)

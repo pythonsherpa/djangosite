@@ -1,8 +1,9 @@
+from django.forms import Textarea
 from django.test import TestCase
 from django.test import tag
 from django.urls import reverse
 
-from ecommerce.forms import ProductForm
+from ecommerce.forms import CustomerForm
 from ecommerce.models import Product
 
 
@@ -41,9 +42,9 @@ class ProductTest(TestCase):
         self.assertContains(response, "<h1>Add customer</h1>", html=True)
 
 
-class ProductFormTest(TestCase):
+class CustomerFormTest(TestCase):
     @tag("to be implemented")
-    def test_product_form(self):
-        form_data = {"name": "Cheese", "price": 5, "description": "From Dutch cows"}
-        form = ProductForm(form_data)
-        self.assertTrue(form.is_valid())
+    def test_customer_form_widget(self):
+        form = CustomerForm()
+        notes_widget = form.fields["first_name"].widget
+        self.assertTrue(isinstance(notes_widget, Textarea))

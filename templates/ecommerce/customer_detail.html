@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Customer Details</h1>
+
+    <ul>
+        <li>Name: {{ object.first_name }} {{ object.last_name }}</li>
+        <li>Email: {{ object.email }}</li>
+    </ul>
+
+{% endblock %}

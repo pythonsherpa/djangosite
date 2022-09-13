@@ -2,10 +2,13 @@
 
 {% block content %}
     <h1>Customers</h1>
+    <p>Please find below a list of our customers. You can also
+        <a href="{% url 'customer-add' %}">add a customer</a>.
+    </p>
     <ul>
-        {% for customer in customers %}
-            <li>{{ customer.first_name }} {{ customer.last_name }}
-                ({{ customer.email }})
+        {% for customer in object_list %}
+            <li>
+                <a href="{% url 'customer-detail' customer.id %}">{{ customer.first_name }} {{ customer.last_name }}</a>
             </li>
         {% endfor %}
     </ul>

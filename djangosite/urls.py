@@ -19,8 +19,8 @@ from django.urls import path, include
 from ecommerce import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('contact/', views.contact_view),
-    path('ecommerce/', include('ecommerce.urls')),
-
+    path("", views.index, name="home"),
+    path("admin/", admin.site.urls),
+    path("contact/", views.ContactView.as_view(), name="contact-us"),
+    path("ecommerce/", include("ecommerce.urls")),
 ]

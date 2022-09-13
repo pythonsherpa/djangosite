@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Welcome at the ecommerce TemplateView homepage.</h1>
+    <h1>Welcome to our E-commerce Website</h1>
+    <p>Pages:
+    <ul>
+        <li>Our <a href="{% url 'customer-list' %}">customers</a></li>
+        <li><a href="{% url 'contact-us' %}">Contact</a></li>
+    </ul>
+    </p>
 {% endblock content %}

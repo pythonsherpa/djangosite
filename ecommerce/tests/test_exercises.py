@@ -34,17 +34,6 @@ class ProductTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     @tag("to be implemented")
-    def test_product_detail(self):
-        """The URL for the detail page for a single product"""
-        product = Product.objects.create(
-            name="Tesla Model S",
-            price=100000,
-            description="Electric car",
-        )
-        response = self.client.get(f"/ecommerce/products/{product.id}")
-        self.assertEqual(response.status_code, 200)
-
-    @tag("to be implemented")
     def test_product_add(self):
         """The URL for adding a new product"""
         response = self.client.get("/ecommerce/products/add/")

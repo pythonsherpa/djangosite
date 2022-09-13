@@ -7,6 +7,6 @@ class Customer(models.Model):
     email = models.EmailField(unique=True)
 
 
-class Product(models.Model):
-    # TODO: create a product model
+class Product:
+    # TODO: create a product model (and inherit from models.Model)
     ...

@@ -7,7 +7,11 @@ class Customer(models.Model):
     email = models.EmailField(unique=True)
     notes = models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
 
-class Product:
-    # TODO: create a product model (and inherit from models.Model)
-    ...
+
+class Product(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.IntegerField()
+    description = models.CharField(max_length=255)

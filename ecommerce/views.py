@@ -4,11 +4,15 @@ from django.views import View
 from django.views.generic import CreateView, ListView, DetailView
 
 from ecommerce.forms import ContactForm, CustomerForm
-from ecommerce.models import Customer
+from ecommerce.models import Customer, Product
 
 
 def index(request):
     return render(request, "ecommerce/index.html")
+
+
+def about(request):
+    return render(request, "ecommerce/about.html")
 
 
 class CustomerListView(ListView):
@@ -26,6 +30,17 @@ class CustomerCreateView(CreateView):
     form_class = CustomerForm
     success_url = "/ecommerce/customers/"
     template_name = "ecommerce/customer_form.html"
+
+
+class ProductListView(ListView):
+    model = Product
+    template_name = "ecommerce/product_list.html"
+
+
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ("name", "price", "description")
+    success_url = "/ecommerce/products/"
 
 
 class ContactView(View):

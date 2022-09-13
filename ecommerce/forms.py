@@ -8,7 +8,8 @@ class CustomerForm(forms.ModelForm):
         model = Customer
         fields = "__all__"
         widgets = {
-            'email': forms.TextInput(attrs={'placeholder': "johndoe@hotmail.com"})
+            'email': forms.TextInput(attrs={'placeholder': "johndoe@hotmail.com"}),
+            'notes': forms.Textarea(attrs={'cols': 40, 'rows': 5})
         }
 
 

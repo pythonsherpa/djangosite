@@ -1,11 +1,19 @@
 from django.test import TestCase
 from django.test import tag
+from django.urls import reverse
 
 from ecommerce.forms import ProductForm
 from ecommerce.models import Product
 
 
-class AboutUsTest(TestCase):
+class URLsTest(TestCase):
+
+    @tag("to be implemented")
+    def test_link_to_homepage(self):
+        response = self.client.get("/ecommerce/customers/")
+        homepage_url = reverse("home")
+        self.assertContains(response, f'<a href="{homepage_url}">')
+
     @tag("to be implemented")
     def test_about_us(self):
         response = self.client.get("/about/")

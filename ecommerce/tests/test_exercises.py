@@ -46,5 +46,5 @@ class CustomerFormTest(TestCase):
     @tag("to be implemented")
     def test_customer_form_widget(self):
         form = CustomerForm()
-        notes_widget = form.fields["first_name"].widget
+        notes_widget = form.fields["notes"].widget
         self.assertTrue(isinstance(notes_widget, Textarea))

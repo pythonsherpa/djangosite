@@ -9,7 +9,7 @@ class ExtraExercisesTest(TestCase):
         """The URL for adding a new product"""
         response = self.client.get("/ecommerce/products/add/")
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "<h1>Add customer</h1>", html=True)
+        self.assertContains(response, "<h1>Add product</h1>", html=True)
 
     @tag("to be implemented")
     def test_magic_method_str(self):

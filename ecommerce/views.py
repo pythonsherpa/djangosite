@@ -8,7 +8,7 @@ from ecommerce.models import Customer
 
 
 def index(request):
-    return render(request, "ecommerce/index.html")
+    return render(request, "index.html")
 
 
 class CustomerListView(ListView):

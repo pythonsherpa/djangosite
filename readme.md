@@ -10,11 +10,11 @@
 ```shell
 pip install -r requirements
 ```
-4. Start the application
+3. Start the application
 ```shell
 python manage.py runserver
 ```
-5. Checkout the application at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+4. Checkout the application at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ### Usage
 

@@ -37,10 +37,7 @@ class ContactView(View):
     def post(self, request):
         form = ContactForm(data=request.POST)
         if form.is_valid():
-            self.send_mail(form.cleaned_data)
+            # process the data in form.cleaned_data as required
+            # ...
             return HttpResponse("Thanks for your message")
         return render(request, "contact.html", {"form": form})
-
-    def send_mail(self, valid_data):
-        # Send mail logic
-        pass

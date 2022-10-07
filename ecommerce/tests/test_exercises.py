@@ -34,13 +34,6 @@ class ProductTest(TestCase):
         response = self.client.get("/ecommerce/products/")
         self.assertEqual(response.status_code, 200)
 
-    @tag("to be implemented")
-    def test_product_add(self):
-        """The URL for adding a new product"""
-        response = self.client.get("/ecommerce/products/add/")
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "<h1>Add customer</h1>", html=True)
-
 
 class CustomerFormTest(TestCase):
     @tag("to be implemented")

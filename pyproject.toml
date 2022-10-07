@@ -1,2 +1,9 @@
 [project]
-name = "Django Ecommerce"
+name = "djangosite"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[options]
+packages = find:

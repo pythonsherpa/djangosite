@@ -8,7 +8,7 @@
 1. Clone this repository
 2. Install the required Python packages
 ```shell
-pip install -r requirements
+pip install -r requirements.txt
 ```
 3. Start the application
 ```shell
